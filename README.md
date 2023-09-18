@@ -1,6 +1,8 @@
-# React + Vite
+# Simple Code For HTML5 Qr Code Scanner 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run,
+npm install
+npm run dev
 
 Currently, two official plugins are available:
 
