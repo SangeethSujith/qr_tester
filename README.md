@@ -1,8 +1,9 @@
 # Simple Code For HTML5 Qr Code Scanner 
 
-To run,
+###To run,
 `npm install`
-`npm run dev`
+
+ `npm run dev`
 
 Currently, two official plugins are available:
 
