@@ -1,39 +1,35 @@
-import { useEffect, useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '../public/vite.svg'; // Corrected the import path
-import './App.css';
-import { Html5QrcodeScanner } from 'html5-qrcode';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { Html5QrcodeScanner } from 'html5-qrcode'
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [scanResult, setScanResult] = useState<string | null>(null); 
-
+  const [count, setCount] = useState(0)
   useEffect(() => {
-    const scanner = new Html5QrcodeScanner('reader', { 
+    const scanner = new Html5QrcodeScanner('reader',{ 
       qrbox: {
         width: 250,
         height: 250,
       },
       fps: 5,
-      verbose: false,
     });
-    function success(result: string) { 
+    function success(result) { 
       scanner.clear();
       setScanResult(result);
     }
-    function error(err: any) { 
+    function error(err) { 
       console.warn(err);
     }
     scanner.render(success, error);
-  }, []); 
-
+  }, []);
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+        <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
+        <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -43,7 +39,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
       {scanResult ? (
@@ -57,7 +53,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
