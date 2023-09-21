@@ -1,7 +1,7 @@
 # Simple Code For HTML5 Qr Code Scanner 
 
-###To run,
-`npm install`
+### To run,
+ `npm install`
 
  `npm run dev`
 
